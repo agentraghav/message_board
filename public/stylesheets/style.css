@@ -1,8 +1,23 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+.body {
+  font-family: 'Roboto', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.heading {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ff9800;
+  font-weight: 500;
+  font-size: 40px;
+  margin-left: 40%;
+}
+
+.row {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  background-color: #ff9800;
+  min-height: 450px;
+  display: flex;
 }
