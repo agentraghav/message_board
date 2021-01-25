@@ -16,10 +16,11 @@
 
 .row1 {
   margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+
   background-color: #ff9800;
   min-height: 450px;
   display: flex;
+  padding-bottom: 50px;
 }
 
 .card {

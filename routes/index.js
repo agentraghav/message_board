@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-
 var message = [
   {
     text: 'Hi there!',
@@ -27,7 +25,7 @@ router.get('/new', function (req, res, next) {
 router.post('/new', (req, res) => {
   message.push({
     text: req.body.message,
-    name: req.body.user,
+    user: req.body.author,
     added: new Date(),
   });
   try {
