@@ -11,3 +11,9 @@ EJS is used to make view files.
 
 This App UI works as shown below 
 
+![message](https://user-images.githubusercontent.com/35917821/105715215-5517c200-5f43-11eb-925d-a449ec41b095.png)
+
+Form page 
+
+
+
