@@ -14,12 +14,13 @@
   margin-left: 40%;
 }
 
-.row {
+.row1 {
   margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+
   background-color: #ff9800;
   min-height: 450px;
   display: flex;
+  padding-bottom: 50px;
 }
 
 .card {
@@ -34,4 +35,44 @@
 
 .col-md-4 {
   margin-top: 40px;
+}
+
+.footer {
+  padding-bottom: 50px;
+  bottom: 0;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: right;
+}
+
+.bot-btn {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+  margin-bottom: 100px;
+  margin-right: 40%;
+  background-color: #343a40;
+  color: #fff;
+  border-radius: 10px;
+  height: 50px;
+  padding: 20px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 300;
+  border: none;
+}
+
+.bot-btn:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #1d1f21;
+}
+
+.card:hover {
+  border: 2px solid #343a40;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  transition: scale(1);
 }
