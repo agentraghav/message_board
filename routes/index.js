@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 
-const message = [
+var message = [
   {
     text: 'Hi there!',
     user: 'Amando',
@@ -22,6 +22,20 @@ router.get('/', function (req, res, next) {
 
 router.get('/new', function (req, res, next) {
   res.render('new', { title: 'New Message' });
+});
+
+router.post('/new', (req, res) => {
+  message.push({
+    text: req.body.message,
+    name: req.body.user,
+    added: new Date(),
+  });
+  try {
+    res.redirect('/');
+  } catch (e) {
+    console.log(e);
+    res.render('new');
+  }
 });
 
 module.exports = router;
