@@ -11,10 +11,22 @@
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
-      <h1 class="heading">Message Board</h1>
+      <h1 class="heading"><%= title %></h1>
     </nav>
     <div class="row">
-      <div class="col"></div>
+      <% message.map(msg=>{ %>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= msg.user %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <%= msg.added.toLocaleDateString() %>
+            </h6>
+            <p class="card-text"><%= msg.text %></p>
+          </div>
+        </div>
+      </div>
+      <% }) %>
     </div>
   </body>
 </html>
