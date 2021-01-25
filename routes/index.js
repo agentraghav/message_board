@@ -20,4 +20,8 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Message Board', message: message });
 });
 
+router.get('/new',(req,res)=>{
+  res.render('new',{title='New Message'})
+})
+
 module.exports = router;
