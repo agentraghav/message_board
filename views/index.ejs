@@ -27,6 +27,13 @@
               <%= msg.added.toLocaleDateString() %>
             </h6>
             <p class="card-text"><%= msg.text %></p>
+            <form
+              class="d-inline"
+              action="/<%= msg.id %>?_method=DELETE"
+              method="post"
+            >
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
           </div>
         </div>
       </div>
