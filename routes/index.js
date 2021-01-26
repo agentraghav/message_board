@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+// dummy data
+
 var message = [
   {
     text: 'Hi there!',
@@ -16,22 +18,19 @@ var message = [
   },
 ];
 
+// home page get route
+
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Message Board', message: message });
 });
+
+// new form page get route
 
 router.get('/new', function (req, res, next) {
   res.render('new', { title: 'New Message' });
 });
 
-router.delete('/:id', (req, res, next) => {
-  for (let i = 0; i < message.length; i++) {
-    if (message[i].id === Number(req.params.id)) {
-      message.splice(i, 1);
-    }
-  }
-  res.redirect('/');
-});
+// form page post route
 
 router.post('/new', (req, res) => {
   message.push({
@@ -46,6 +45,17 @@ router.post('/new', (req, res) => {
     console.log(e);
     res.render('new');
   }
+});
+
+// delete route
+
+router.delete('/:id', (req, res, next) => {
+  for (let i = 0; i < message.length; i++) {
+    if (message[i].id === Number(req.params.id)) {
+      message.splice(i, 1);
+    }
+  }
+  res.redirect('/');
 });
 
 module.exports = router;
